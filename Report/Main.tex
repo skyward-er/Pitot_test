@@ -1,0 +1,52 @@
+% Copyright (c) 2021 Skyward Experimental Rocketry
+% Author: Alberto Nidasio
+% Description: Main file which includes every other tex files.
+
+\documentclass[english]{report}
+
+% Settings
+\input{Settings/Document settings}
+\input{Settings/User settings}
+
+% Document begin
+\begin{document}
+
+% Title page
+\input{TitlePage}
+
+% Start page numbering in romans
+\pagenumbering{roman}
+
+% Abstract and table of contents
+\input{Titleback}
+
+% Start numeric page numbering
+\pagenumbering{arabic}
+\setcounter{page}{1}
+
+% Chapters sections
+\chapter*{1. Set-up}
+\addcontentsline{toc}{chapter}{1. Set-up}
+\stepcounter{chapter}
+\label{chapter:Set-up}
+\input{Chapters/0 Set up}
+
+\chapter*{2. Procedure}
+\addcontentsline{toc}{chapter}{2. Procedure}
+\stepcounter{chapter}
+\label{chapter:Procedure}
+\input{Chapters/1 Procedure}
+
+\chapter*{3. Results}
+\addcontentsline{toc}{chapter}{3. Results}
+\stepcounter{chapter}
+\label{chapter:Results}
+\input{Chapters/2 Results}
+
+\chapter*{4. Conclusions}
+\addcontentsline{toc}{chapter}{4. Conclusions}
+\stepcounter{chapter}
+\label{chapter:Conclusions}
+\input{Chapters/3 Conclusions}
+
+\end{document}
